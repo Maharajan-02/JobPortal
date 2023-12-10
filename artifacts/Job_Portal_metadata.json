@@ -1,0 +1,677 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "applicant_registered_success",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "applicant_id",
+						"type": "uint256"
+					}
+				],
+				"name": "experiance_added",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "job_owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "job_title",
+						"type": "string"
+					}
+				],
+				"name": "job_added",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "applicant_id",
+						"type": "uint256"
+					}
+				],
+				"name": "qualification_added",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "tech_name",
+						"type": "string"
+					}
+				],
+				"name": "techs_added",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_company_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_role",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_years_of_experiance",
+						"type": "uint8"
+					}
+				],
+				"name": "add_experiance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "tech_name",
+						"type": "string"
+					}
+				],
+				"name": "add_good_to_have_tech",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_role",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_number_of_opening",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_company_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_location",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_mail",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phone",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Job_Portal.ApplicantType",
+						"name": "_applicant_type",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_required_exp",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_industry_type",
+						"type": "string"
+					}
+				],
+				"name": "add_new_job",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_course_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_degree",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_percentage",
+						"type": "uint256"
+					}
+				],
+				"name": "add_qualififcation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "tech_name",
+						"type": "string"
+					}
+				],
+				"name": "add_required_tech",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_tech_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_years_of_experiance",
+						"type": "uint8"
+					}
+				],
+				"name": "add_techs",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "get_applicant_detail",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "applicant_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "eth_address",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "applicant_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "applicant_address",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "applicant_email_id",
+								"type": "string"
+							},
+							{
+								"internalType": "enum Job_Portal.ApplicantType",
+								"name": "applicant_Type",
+								"type": "uint8"
+							},
+							{
+								"internalType": "string",
+								"name": "applicant_phone_number",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "current_salary",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "expected_salary",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "applicant_rating",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "no_of_rating",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Job_Portal.Applicants",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "get_applicant_rating",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "get_applicant_type",
+				"outputs": [
+					{
+						"internalType": "enum Job_Portal.ApplicantType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					}
+				],
+				"name": "get_job_details",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "job_eth_address",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "job_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "Role",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "job_description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "number_of_opening",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum Job_Portal.ApplicantType",
+								"name": "applicant_type",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "required_years_of_experiance",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "total_rating",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "num_of_ratings",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "job_posted",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Job_Portal.Job_Post",
+						"name": "",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "company_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "job_location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "comapany_mail",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "company_phone",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "Industry_type",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Job_Portal.ContactDetails",
+						"name": "",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "tech_names",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Job_Portal.Required_Techs[]",
+						"name": "",
+						"type": "tuple[]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "tech_names",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Job_Portal.Good_To_Have_Techs[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					}
+				],
+				"name": "get_job_rating",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					}
+				],
+				"name": "post_job_online",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rating",
+						"type": "uint256"
+					}
+				],
+				"name": "rate_applicant",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "rating",
+						"type": "uint8"
+					}
+				],
+				"name": "rate_job",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_address",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phone_number",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Job_Portal.ApplicantType",
+						"name": "applicant_type",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "current_salary_in_LPA",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "expected_salary_in_LPA",
+						"type": "uint8"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "job_id",
+						"type": "uint256"
+					}
+				],
+				"name": "remove_job_online",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"JobPortal_SmartContract.sol": "Job_Portal"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"JobPortal_SmartContract.sol": {
+			"keccak256": "0xa5b1a004b4a7ffe85d08137f9fc6879c99465806200288529d6294856caddce0",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://1f11bf40fa6e334e8f734c46cac08b77a98b2e0f78caba4e80036ed3256d99e9",
+				"dweb:/ipfs/QmYePSX8KLVVTCoAkmK4c6692dFE6qeA86GNsLBTFghvzd"
+			]
+		}
+	},
+	"version": 1
+}
